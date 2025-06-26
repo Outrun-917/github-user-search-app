@@ -41,7 +41,7 @@ function updateProfileCard(data) {
     $userJoinDate.textContent = `Joined ${new Date(
       data.created_at
     ).toLocaleDateString()}`;
-    $userProfileLink.textContent = data.login;
+    $userProfileLink.textContent = `@${data.login}`;
     $userProfileLink.setAttribute("href", data.html_url);
 
     if (data.bio !== null) {
